@@ -179,17 +179,7 @@
         }
     }
     
-    if ([[self badgeValue] length] && [self badgeBackgroundImage]) {
-        CGSize badgeSize = [[self badgeBackgroundImage] size];
-        CGRect badgeBackgroundFrame = CGRectMake(roundf(frameSize.width / 2 + (image.size.width / 2) * 0.9) + [self badgePositionAdjustment].horizontal,
-                                                 [self badgePositionAdjustment].vertical,
-                                                 badgeSize.width, badgeSize.height);
-        
-        [[self badgeBackgroundImage] drawInRect:badgeBackgroundFrame];
-    }
-    
     // Draw badges
-    /*
     if ([[self badgeValue] length]) {
         CGSize badgeSize = CGSizeZero;
         
@@ -252,7 +242,6 @@
 #endif
         }
     }
-     */
     
     CGContextRestoreGState(context);
 }
